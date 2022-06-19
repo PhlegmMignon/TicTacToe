@@ -1,0 +1,66 @@
+:root {
+    --purple: solid blue;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px 0px;
+    font-family: Roboto, sans-serif;
+}
+
+
+body {
+    /* display: flex; */
+    /* flex-direction: column; */
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    background-color: lightgrey;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    padding: 20px 20px;
+}
+    #gameBoard {
+        display: inline-flex;
+        justify-self: center;
+        flex-wrap: wrap;
+        background-color: lightgrey;
+        height: calc(10 + (120 x 3)px);
+        width: 380px;
+        gap: 10px;
+        
+    }
+
+        .tiles {
+            box-sizing: border-box;
+            display: flex;
+            background-color: white;
+            border-radius: 30px;
+        }
+
+
+footer {
+    display: flex;
+    width: 315px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: 8px;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+    img {
+        width: 25px;
+        height: auto;
+        vertical-align: middle;
+    }
