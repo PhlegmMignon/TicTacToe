@@ -1,5 +1,5 @@
 :root {
-    --purple: solid blue;
+    /* --purple: solid blue; */
 }
 
 
@@ -55,6 +55,13 @@ body {
             font-size: 60px;
         }
 
+        .modal {
+            position: absolute;
+            margin: auto;
+            padding: 2rem;
+            font-size: 2rem;
+            border-radius: 8px;
+        }
 
 footer {
     display: flex;

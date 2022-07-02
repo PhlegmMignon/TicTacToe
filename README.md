@@ -1,22 +1,8 @@
 # TicTacToe
 
-
-
-TDL:    Gameboard object, turn determine object
-
-
-
-012  = 3
-345  = 12
-678  = 21
-
-036  = 9
-147  = 12
-258  = 15
-
-048  = 12
-246  = 12
-
+Reflection: Fairly straightforward probject. I learned a bit about using dialog modals and 
+data attributes. 
+I was able to keep everything except for 1 variable out of global scope. 
 
 
 

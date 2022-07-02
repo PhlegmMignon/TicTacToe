@@ -16,13 +16,7 @@ const gameBoard = (() => {
         tileArray.push(tile);
         board.appendChild(tile);
     }
-
-
-
 })();
-
-
-
 
 function turnChecker(id) {
 
@@ -33,11 +27,7 @@ function turnChecker(id) {
     else if (counter == 1) {
         markO(id);
     }
-    
-
-    
 }
-
 
 function markX(id) {
     let tile = document.getElementById(id);
@@ -52,15 +42,11 @@ function markX(id) {
         let thing = document.querySelectorAll('.tiles');
         // console.log(thing);
 
-
-        counter++;
-        
+        counter++; 
     }
     else {
     }
-
 }
-
 
 const markO = (id) => {
     let tile = document.getElementById(id);
@@ -73,27 +59,29 @@ const markO = (id) => {
 
         winCheck();
 
-        counter--;
-
-        
+        counter--;    
     }
     else {
     }
 }
 
-
 function winner(string) {
     if (string == 'X') {
-        
+        Xmodal = document.getElementById('Xmodal');
+        Xmodal.showModal();
+        Xmodal.addEventListener('click', () => {window.location.reload();});
     }
     if (string == 'O') {
-
+        Omodal = document.getElementById('Omodal');
+        Omodal.showModal();
+        Omodal.addEventListener('click', () => {window.location.reload();});
     }
     if (string == 'tie') {
-
+        tieModal = document.getElementById('tieModal');
+        tieModal.showModal();
+        tieModal.addEventListener('click', () => {window.location.reload();});
     }
 }
-
 
 const winCheck = () => {
     //Checks row1
@@ -153,6 +141,19 @@ const winCheck = () => {
         winner('O');
     }
     else {
-        winner('tie');
+
+        let localCounter = 0;
+
+        for (let i = 0; i < 8; i++) {
+            let tile = document.getElementById(i);
+            let isMarked = tile.getAttribute('marked');
+            if (isMarked == 'marked') {
+                localCounter++;
+            }
+        }
+        
+        if (localCounter == 8) {
+            winner('tie');
+        }
     }
 }
